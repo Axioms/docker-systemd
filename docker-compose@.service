@@ -6,8 +6,8 @@ After=docker.service
 [Service]
 Type=oneshot
 RemainAfterExit=true
-Enviroment="DOCKER_CLIENT_TIMEOUT=120"
-Enviroment="COMPOSE_HTTP_TIMEOUT=120"
+Environment="DOCKER_CLIENT_TIMEOUT=120"
+Environment="COMPOSE_HTTP_TIMEOUT=120"
 WorkingDirectory=/etc/docker/compose/%i
 
 ExecStart=/usr/bin/docker-compose up -d --remove-orphans
